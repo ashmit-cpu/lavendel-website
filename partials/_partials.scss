@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
 
-$gulf_mining_bg: #e4edf1;
-$gmg_dark_blue: #036AAB;
-$gmg_green: #ADD039;
+
 
 
 
@@ -58,7 +55,7 @@ $gmg_green: #ADD039;
     padding: 50px 60px;
 
   }
-  @media all and (max-width:992px) {
+  @media all and (max-width:768px) {
     padding: 50px 20px;
 
   }

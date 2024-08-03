@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             pin: true,
         }
     });
-    gsap.from(".content", {
+    gsap.from(".our-clients .content", {
         opacity: 0,
 
         ease: "none",
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             markers: false 
         }
     });
-    gsap.to(".content", {
+    gsap.to(".our-clients .content", {
         opacity: 1,
         ease: "none",
         scrollTrigger: {

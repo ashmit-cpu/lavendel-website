@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 @font-face {
   font-family: "AeonikTRIAL";
   src: url("../assets/fonts/New Aeonik Trials/AeonikTRIAL-Regular.otf") format("opentype");
@@ -64,7 +63,7 @@
     padding: 50px 60px;
   }
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 768px) {
   .pricing .container {
     padding: 50px 20px;
   }
@@ -125,7 +124,7 @@
     padding: 50px 60px;
   }
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 768px) {
   .we-work .container {
     padding: 50px 20px;
   }
