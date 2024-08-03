@@ -1,0 +1,270 @@
+@use './partials/partials';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.hero-section {
+    height: 100vh;
+    position: relative;
+    background-color: white;
+    padding: 40px;
+
+    .zoom {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 30px;
+
+
+
+        .image {
+            position: absolute;
+            inset: 0;
+
+
+            img {
+                width: 102%;
+                height: 102%;
+                object-fit: cover;
+
+            }
+
+            &.image-1 {
+                position: relative;
+
+                .text-overlay {
+                    position: absolute;
+                    bottom: 2%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    /* Text color */
+                    text-align: center;
+                    z-index: 1;
+                    /* Ensure it appears above the image */
+                    padding: 20px;
+                    opacity: 0;
+
+                    h2 {
+                        font-family: 'AeonikTRIAL';
+                        font-size: 64px;
+                        font-weight: 400;
+                    }
+
+                }
+            }
+        }
+
+
+
+    }
+}
+
+
+// pricing  section
+
+
+.pricing {
+    .container {
+        @include partials.container_padding;
+
+        .heading {
+            @include partials.h2_style;
+            padding-bottom: 40px;
+            width: 60%;
+
+        }
+
+        .row {
+            display: flex;
+            align-items: end;
+
+            .left-col {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                    max-width: 450px;
+                }
+            }
+
+            .right-col {
+                width: 50%;
+                min-height: 400px;
+
+                p {
+                    @include partials.p_style;
+                }
+
+                .counter-section {
+                    display: flex;
+                    padding: 30px 0;
+                    gap: 40px;
+
+                    div {
+                        span {
+                            font-size: 50px;
+                            color: #31B4E7;
+                            font-family: 'AeonikTRIAL';
+
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+// Industries We Work 
+
+.we-work {
+    background-color: #43D1E9;
+    overflow: hidden;
+    height: 120vh;
+
+    .container {
+        @include partials.container_padding;
+
+        .heading {
+            @include partials.h2_style;
+            text-align: right;
+            color: white;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 60px;
+            margin: 4%;
+            transform: rotate(3deg);
+
+            .card {
+                width: 100%;
+                position: relative;
+
+                img {
+                    width: 400px;
+                    height: 100%;
+                    min-height: 350px;
+                    object-fit: cover;
+                    border-radius: 30px;
+                }
+
+                .content {
+                    position: absolute;
+                    padding: 16px;
+                    bottom: 0;
+                    background: linear-gradient(180deg, rgba(black, 0) 0%, rgba(black, 0.4318102240896359) 21%, rgba(black, 0.8) 100%);
+                    border-radius: 0 0 30px 30px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.4s;
+
+                    h4 {
+                        @include partials.p_style;
+                        color: white;
+                    }
+
+
+                }
+
+                &:hover {
+                    .content {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.our-clients {
+    position: relative;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        /* Initially hidden */
+        z-index: 1;
+        text-align: center;
+
+
+        h2 {
+            @include partials.h1_style;
+        }
+
+        h3 {
+            @include partials.h3_style;
+
+
+        }
+    }
+
+    .client-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        img {
+            width: 100px;
+
+        }
+
+        img:nth-child(1) {
+            position: relative;
+            top: 20%;
+        }
+
+        img:nth-child(2) {
+            position: relative;
+            top: 50%;
+        }
+
+        img:nth-child(3) {
+            position: relative;
+            top: -20%;
+        }
+
+        img:nth-child(4) {
+            position: relative;
+            top: -60%;
+        }
+
+        img:nth-child(5) {
+            position: relative;
+            top: 50%;
+        }
+    }
+
+}

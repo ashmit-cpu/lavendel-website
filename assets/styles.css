@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+@font-face {
+  font-family: "AeonikTRIAL";
+  src: url("../assets/fonts/New Aeonik Trials/AeonikTRIAL-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  padding: 40px;
+}
+.hero-section .zoom {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.hero-section .zoom .image {
+  position: absolute;
+  inset: 0;
+}
+.hero-section .zoom .image img {
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+}
+.hero-section .zoom .image.image-1 {
+  position: relative;
+}
+.hero-section .zoom .image.image-1 .text-overlay {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* Text color */
+  text-align: center;
+  z-index: 1;
+  /* Ensure it appears above the image */
+  padding: 20px;
+  opacity: 0;
+}
+.hero-section .zoom .image.image-1 .text-overlay h2 {
+  font-family: "AeonikTRIAL";
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.pricing .container {
+  padding: 50px 80px;
+}
+@media all and (max-width: 992px) {
+  .pricing .container {
+    padding: 50px 60px;
+  }
+}
+@media all and (max-width: 992px) {
+  .pricing .container {
+    padding: 50px 20px;
+  }
+}
+.pricing .container .heading {
+  font-family: "AeonikTRIAL";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-bottom: 40px;
+  width: 60%;
+}
+.pricing .container .row {
+  display: flex;
+  align-items: end;
+}
+.pricing .container .row .left-col {
+  width: 50%;
+}
+.pricing .container .row .left-col img {
+  width: 100%;
+  max-width: 450px;
+}
+.pricing .container .row .right-col {
+  width: 50%;
+  min-height: 400px;
+}
+.pricing .container .row .right-col p {
+  font-family: "AeonikTRIAL";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+.pricing .container .row .right-col .counter-section {
+  display: flex;
+  padding: 30px 0;
+  gap: 40px;
+}
+.pricing .container .row .right-col .counter-section div span {
+  font-size: 50px;
+  color: #31B4E7;
+  font-family: "AeonikTRIAL";
+}
+.pricing .container .row .right-col .counter-section div p {
+  font-size: 16px;
+}
+
+.we-work {
+  background-color: #43D1E9;
+  overflow: hidden;
+  height: 120vh;
+}
+.we-work .container {
+  padding: 50px 80px;
+}
+@media all and (max-width: 992px) {
+  .we-work .container {
+    padding: 50px 60px;
+  }
+}
+@media all and (max-width: 992px) {
+  .we-work .container {
+    padding: 50px 20px;
+  }
+}
+.we-work .container .heading {
+  font-family: "AeonikTRIAL";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: right;
+  color: white;
+}
+.we-work .container .card-container {
+  display: flex;
+  gap: 60px;
+  margin: 4%;
+  transform: rotate(3deg);
+}
+.we-work .container .card-container .card {
+  width: 100%;
+  position: relative;
+}
+.we-work .container .card-container .card img {
+  width: 400px;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.we-work .container .card-container .card .content {
+  position: absolute;
+  padding: 16px;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4318102241) 21%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 0 0 30px 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+.we-work .container .card-container .card .content h4 {
+  font-family: "AeonikTRIAL";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: white;
+}
+.we-work .container .card-container .card:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.our-clients {
+  position: relative;
+  height: 100vh;
+  /* Full viewport height */
+  overflow: hidden;
+}
+.our-clients .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Initially hidden */
+  z-index: 1;
+  text-align: center;
+}
+.our-clients .content h2 {
+  font-family: "AeonikTRIAL";
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.our-clients .content h3 {
+  font-family: "AeonikTRIAL";
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.our-clients .client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.our-clients .client-logos img {
+  width: 100px;
+}
+.our-clients .client-logos img:nth-child(1) {
+  position: relative;
+  top: 20%;
+}
+.our-clients .client-logos img:nth-child(2) {
+  position: relative;
+  top: 50%;
+}
+.our-clients .client-logos img:nth-child(3) {
+  position: relative;
+  top: -20%;
+}
+.our-clients .client-logos img:nth-child(4) {
+  position: relative;
+  top: -60%;
+}
+.our-clients .client-logos img:nth-child(5) {
+  position: relative;
+  top: 50%;
+}

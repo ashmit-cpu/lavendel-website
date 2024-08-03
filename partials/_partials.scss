@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
+$gulf_mining_bg: #e4edf1;
+$gmg_dark_blue: #036AAB;
+$gmg_green: #ADD039;
+
+
+
+@font-face {
+  font-family: 'AeonikTRIAL';
+  src: url('../assets/fonts/New\ Aeonik\ Trials/AeonikTRIAL-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// fonts mixins 
+
+@mixin h2_style {
+  font-family: 'AeonikTRIAL';
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 150%;
+
+
+}
+@mixin h3_style {
+  font-family: 'AeonikTRIAL';
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 150%;
+
+
+}
+@mixin h1_style {
+  font-family: 'AeonikTRIAL';
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 150%;
+
+
+}
+
+@mixin p_style{
+  font-family: 'AeonikTRIAL';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+
+}
+
+
+@mixin container_padding {
+  padding: 50px 80px;
+
+  @media all and (max-width:992px) {
+    padding: 50px 60px;
+
+  }
+  @media all and (max-width:992px) {
+    padding: 50px 20px;
+
+  }
+}
+
